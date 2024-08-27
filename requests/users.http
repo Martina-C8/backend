@@ -1,0 +1,40 @@
+//Per vedere tutti gli utenti 
+GET http://localhost:5000/users
+// ?page=2 per vedere le query in pagina 2
+// /?page=1&perPage=2 2 per pagina 
+// ?perPage=4 4 risultati per pagina 
+
+### 
+//per creare un nuovo utente seguendo lo schema 
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Paolo",
+    "email": "casettapaolo@gmail.com",
+    "age": 49,
+    "role": "User", 
+    "approved": true
+}
+
+### 
+//per trovare utente con id userID
+GET http://localhost:5000/users/66cda3ec4a106d20fa5a9d1c
+
+###
+//per modificare utente con id userID
+//chiamata http + nome collection + id della persona che voglio modificare
+//non ci va la virgola, ti da l'errore!! 
+PUT http://localhost:5000/users/66cdad1380dc4b47c4001c1a
+Content-Type: application/json
+
+{
+    "name": "Riccardo"
+}
+
+//per vedere il database, vai su mongodb, clusters, browse collections e vedi tutti i dati che hai inserito 
+
+
+
+
+
